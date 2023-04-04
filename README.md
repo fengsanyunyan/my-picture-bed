@@ -51,11 +51,11 @@ image_url = response.json()['content']['html_url']
 > Here, you'll need to replace the following placeholders with your own information:
 > 
 > username: Your Github username
-> + token: A personal access token with the repo scope that you've generated on Github
-> + repo_owner: The username of the owner of the repository
-> + repo_name: The name of the repository
-> + repo_path: The path where you want to upload the image, relative to the repository root
-> + file_path: The path of the image file on your local machine
+> + `**token**`: A personal access token with the repo scope that you've generated on Github
+> + `**repo_owner**`: The username of the owner of the repository
+> + `**repo_name**`: The name of the repository
+> + `**repo_path**`: The path where you want to upload the image, relative to the repository root
+> + `**file_path**`: The path of the image file on your local machine
 > The code first reads the image file as bytes, and then base64 encodes the content. It then creates the API endpoint URL, request headers, and request body. Finally, it sends a POST request to upload the image, and extracts the uploaded image URL from the response.
 > 
 > Note that this code assumes that the repository is public. If the repository is private, you'll need to add the repo scope to your personal access token, and modify the request headers to include the Accept header with the value 'application/vnd.github.v3+json'.
